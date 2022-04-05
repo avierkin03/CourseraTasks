@@ -97,7 +97,8 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
         //{{randomCategoryShortName}} becomes an argument being passed into the $dc.loadMenuItems function. Think about what that argument needs
         // to look like. For example, a valid call would look something like this: $dc.loadMenuItems('L'). Hint: you need to surround the chosen 
         //category short name with something before inserting it into the home html snippet.
-        var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", "'" + chosenCategoryShortName + "'");
+        chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
+        var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName);
         // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page. Use the existing insertHtml function for that purpose. 
         //Look through this code for an example of how to do that.
         insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
